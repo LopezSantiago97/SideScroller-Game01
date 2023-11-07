@@ -2,6 +2,10 @@
 # Sidescroller 2D
 
 ## Pasos para clonar
+-> Instalar Node.js
+
+-> Instalar Node Package Manager (NPM)
+
 -> Crear carpeta
 
 -> Abrir consola en esa carpeta
