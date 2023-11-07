@@ -3,15 +3,21 @@
 
 ## Pasos para clonar
 -> Crear carpeta
+
 -> Abrir consola en esa carpeta
+
 -> Ejecutar :
+
 ```bash
 git init
+
+git clone <LinkRepo>
 
 npm install
 
 npm run start
 ```
+
 -> Fin
 
 
@@ -24,12 +30,19 @@ Los sprites son de Kenny (ver url)
 
 ## TODO
 -> Proyectiles
+
 -> Enemigos
+
 -> Gestion de Niveles
+
 -> Game Over
+
 -> Menu principal
+
 -> Sonidos
+
 -> Particulas?
+
 -> Guardar data (ver si lo hago por API a alguna nube o solo local)
 
 
