@@ -1,9 +1,42 @@
-# Phaser 3 + TypeScript + Vite.js Template
-> Make Phaser 3 games with TypeScript and modern frontend tooling.
 
-![License](https://img.shields.io/badge/license-MIT-green)
+# Sidescroller 2D
 
-This is a TypeScript specific fork of [phaser3-vite-template](https://github.com/ourcade/phaser3-vite-template).
+## Pasos para clonar
+-> Crear carpeta
+-> Abrir consola en esa carpeta
+-> Ejecutar :
+```bash
+git init
+
+npm install
+
+npm run start
+```
+-> Fin
+
+
+## Observaciones
+El mapa esta hecho con Tiled
+Las animaciones con X (ver nombre del programa)
+Los sprites son de Kenny (ver url)
+
+
+
+## TODO
+-> Proyectiles
+-> Enemigos
+-> Gestion de Niveles
+-> Game Over
+-> Menu principal
+-> Sonidos
+-> Particulas?
+-> Guardar data (ver si lo hago por API a alguna nube o solo local)
+
+
+====================================================================================================================================
+
+# Phaser 3 + TypeScript + Vite.js
+Fuente del fork [phaser3-vite-template](https://github.com/ourcade/phaser3-vite-template).
 
 ## Prerequisites
 
@@ -46,33 +79,14 @@ To create a production build:
 npm run build
 ```
 
-Production files will be placed in the `dist` folder. Then upload those files to a web server. 🎉
-
-## Project Structure
-
-```
-    .
-    ├── dist
-    ├── node_modules
-    ├── public
-    ├── src
-    │   ├── HelloWorldScene.ts
-    │   ├── main.ts
-	├── index.html
-    ├── package.json
-```
-
-TypeScript files are intended for the `src` folder. `main.ts` is the entry point referenced by `index.html`.
-
-Other than that there is no opinion on how you should structure your project.
-
-There is an example `HelloWorldScene.ts` file that can be placed inside a `scenes` folder to organize by type or elsewhere to organize by function. For example, you can keep all files specific to the HelloWorld scene in a `hello-world` folder.
-
-It is all up to you!
+TypeScript files are intended for the `src` folder. 
+`main.ts` is the entry point referenced by `index.html`.
 
 ## Static Assets
 
-Any static assets like images or audio files should be placed in the `public` folder. It'll then be served from the root. For example: http://localhost:8000/images/my-image.png
+Any static assets like images or audio files should be placed in the `public` folder. 
+It'll then be served from the root. 
+For example: http://localhost:8000/images/my-image.png
 
 Example `public` structure:
 
@@ -88,17 +102,11 @@ Example `public` structure:
 
 They can then be loaded by Phaser with `this.image.load('my-image', 'images/my-image.png')`.
 
-# TypeScript ESLint
-
-This template uses a basic `typescript-eslint` set up for code linting.
-
-It does not aim to be opinionated.
-
-[See here for rules to turn on or off](https://eslint.org/docs/rules/).
 
 ## Dev Server Port
 
-You can change the dev server's port number by modifying the `vite.config.ts` file. Look for the `server` section:
+Se puede modificar el puerto en `vite.config.ts` file. 
+Look for the `server` section:
 
 ```js
 {
@@ -107,8 +115,4 @@ You can change the dev server's port number by modifying the `vite.config.ts` fi
 }
 ```
 
-Change 8000 to whatever you want.
-
-## License
-
-[MIT License](https://github.com/ourcade/phaser3-vite-template/blob/master/LICENSE)
+Se puede cambiar de 8000 al puerto que pinte.
