@@ -3,8 +3,8 @@ import { sharedInstance as events } from "./EventCenter";
 
 export default class UI extends Phaser.Scene {
 
-    private starsLabel!: Phaser.GameObjects.Text
-    private starsCollected = 0
+    private collectablesLabel!: Phaser.GameObjects.Text
+    private applesCollected = 0
     private graphics!: Phaser.GameObjects.Graphics
 
     private lastHealth = 100
@@ -15,7 +15,7 @@ export default class UI extends Phaser.Scene {
         })
     }
     init() {
-        this.starsCollected = 0
+        this.applesCollected = 0
     }
 
     create() {
@@ -26,19 +26,19 @@ export default class UI extends Phaser.Scene {
 
 
         // Texto con contador de estrellas
-        this.starsLabel = this.add.text(10, 35, 'Manzanas: 0', {
+        this.collectablesLabel = this.add.text(10, 35, 'Manzanas: 0', {
             fontSize: '32px'
         })
 
         // Aumentar collectible
-        events.on('star-collected', this.handleStarCollected, this)
+        events.on('apple-collected', this.handleAppleCollected, this)
 
         events.on('health-changed', this.handleHealthChanged, this)
 
         // Si se cambia la pantalla (no actualizar la pagina), con esta linea 
         // se re-setean los eventos para que apliquen una sola vez
         this.events.once(Phaser.Scenes.Events.DESTROY, () => {
-            events.off('star-collected', this.handleStarCollected, this)
+            events.off('apple-collected', this.handleAppleCollected, this)
         })
     }
 
@@ -74,9 +74,9 @@ export default class UI extends Phaser.Scene {
         this.lastHealth = value
     }
 
-    private handleStarCollected() {
-        ++this.starsCollected
-        this.starsLabel.text = `Manzanas: ${this.starsCollected}`
+    private handleAppleCollected() {
+        ++this.applesCollected
+        this.collectablesLabel.text = `Manzanas: ${this.applesCollected}`
     }
 
 }

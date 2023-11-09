@@ -65,14 +65,14 @@ export default class Game extends Phaser.Scene {
 
                         break
                     }
-                case 'star':
+                case 'collectables_Apple':
                     {
-                        const star = this.matter.add.sprite(x, y, 'apple', undefined, {
+                        const apple = this.matter.add.sprite(x, y, 'apple', undefined, {
                             isStatic: true,
                             isSensor: true
                         })
-                        star.setScale(0.5, 0.5)
-                        star.setData('type', 'star')
+                        apple.setScale(0.5, 0.5)
+                        apple.setData('type', 'apple')
                         break
                     }
                 case 'health':
@@ -97,11 +97,10 @@ export default class Game extends Phaser.Scene {
                     }
                 case 'spike-top':
                     {
-                        const spikeTop = this.matter.add.sprite(x, y, 'spike-top', undefined, {
+                        const spikeTop = this.matter.add.sprite(x + (width * 0.5), y + (height * 1), 'spike-top', undefined, {
                             isStatic: true,
                             isSensor: true
                         })
-                        spikeTop.setScale(0.05, 0.05)
                         spikeTop.setData('type', 'spike-top')
                         spikeTop.setData('damage', 10)
 

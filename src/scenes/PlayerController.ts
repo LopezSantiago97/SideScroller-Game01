@@ -15,6 +15,8 @@ export default class PlayerController {
 
     private health = 100
     private speed = 7
+    private damage = 10
+    private healing = 10
 
 
     constructor(scene: Phaser.Scene, sprite: Phaser.Physics.Matter.Sprite, cursors: CursorKeys, obstacles: ObstaclesController) {
@@ -55,6 +57,7 @@ export default class PlayerController {
 
             // Collision con los spikes
             if (!this.obstacles.is('spikes', body)) {
+                this.health = Phaser.Math.Clamp(this.health - this.damage, 0, 100)
                 this.stateMachine.setState('spike-hit')
                 return
             }
@@ -80,16 +83,24 @@ export default class PlayerController {
 
             // En funcion del type del objeto interactivo, se setea su accion
             switch (type) {
-                case 'star':
-                    events.emit('star-collected')
+                case 'apple':
+                    events.emit('apple-collected')
                     sprite.destroy()
                     break
 
                 case 'health':
                     {
-                        const value = sprite.getData('healthPoints') ?? 10
+                        const value = sprite.getData('healthPoints') ?? this.healing
                         this.health = Phaser.Math.Clamp(this.health + value, 0, 100)
                         events.emit('health-changed', this.health)
+                        sprite.destroy()
+                        break
+                    }
+                case 'spike-top':
+                    {
+                        const damage = sprite.getData('damage') ?? this.damage
+                        this.health = Phaser.Math.Clamp(this.health - damage, 0, 100)
+                        this.stateMachine.setState('spike-hit')
                         sprite.destroy()
                         break
                     }
@@ -162,7 +173,9 @@ export default class PlayerController {
 
     private spikeHitOnEnter() {
         this.sprite.setVelocityY(-5)
-        this.health = Phaser.Math.Clamp(this.health - 10, 0, 100)
+
+        // El daño ahora se setea en el chequeo de colision
+        // this.health = Phaser.Math.Clamp(this.health - this.damage, 0, 100)
 
         // TODO: reemplazar los string literals por enums
         events.emit('health-changed', this.health)

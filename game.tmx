@@ -815,10 +815,10 @@
  </layer>
  <objectgroup id="2" name="objects">
   <object id="4" name="player-spawn" x="6512.61" y="67.1512" width="66.6667" height="70.6667"/>
-  <object id="11" name="star" x="984" y="420.667" width="60" height="62"/>
-  <object id="14" name="star" x="1550.67" y="488" width="54" height="62"/>
-  <object id="15" name="star" x="2524.67" y="70.6667" width="54" height="56"/>
-  <object id="16" name="star" x="1544" y="66.6667" width="66" height="60"/>
+  <object id="11" name="collectables_Apple" x="984" y="420.667" width="60" height="62"/>
+  <object id="14" name="collectables_Apple" x="1550.67" y="488" width="54" height="62"/>
+  <object id="15" name="collectables_Apple" x="2524.67" y="70.6667" width="54" height="56"/>
+  <object id="16" name="collectables_Apple" x="1544" y="66.6667" width="66" height="60"/>
   <object id="18" name="spikes" x="1265.33" y="738.667" width="272" height="29.3333"/>
   <object id="19" name="health" x="1969.33" y="633.333" width="45.3333" height="52"/>
   <object id="20" name="trap-fall" x="3018" y="1020" width="262" height="28"/>
@@ -842,26 +842,26 @@
   <object id="42" name="tree-branch" x="5039.58" y="492.167" width="20.1667" height="17"/>
   <object id="44" name="tree-branch" x="4175.58" y="492.167" width="85.5" height="17"/>
   <object id="45" name="tree-branch" x="3293.58" y="491.5" width="155.5" height="17"/>
-  <object id="47" name="star" x="2878.33" y="489" width="54" height="62"/>
-  <object id="48" name="star" x="3298.33" y="419.667" width="54" height="62"/>
-  <object id="49" name="star" x="3998.33" y="695.667" width="54" height="62"/>
-  <object id="50" name="star" x="4833" y="770.333" width="54" height="62"/>
-  <object id="51" name="star" x="5187.67" y="563.667" width="54" height="62"/>
-  <object id="52" name="star" x="5322.33" y="706.333" width="54" height="62"/>
-  <object id="53" name="star" x="6023.67" y="206.333" width="54" height="62"/>
-  <object id="54" name="star" x="5818.33" y="483.667" width="54" height="62"/>
-  <object id="55" name="star" x="6163.67" y="627.667" width="54" height="62"/>
-  <object id="56" name="star" x="5323.67" y="282.333" width="54" height="62"/>
-  <object id="57" name="star" x="7214.33" y="67.6667" width="54" height="62"/>
-  <object id="58" name="star" x="7989" y="-203" width="54" height="62"/>
-  <object id="59" name="star" x="7709" y="-491" width="54" height="62"/>
-  <object id="60" name="star" x="7355.67" y="-619" width="54" height="62"/>
-  <object id="61" name="star" x="7705" y="-135" width="54" height="62"/>
+  <object id="47" name="collectables_Apple" x="2878.33" y="489" width="54" height="62"/>
+  <object id="48" name="collectables_Apple" x="3298.33" y="419.667" width="54" height="62"/>
+  <object id="49" name="collectables_Apple" x="3998.33" y="695.667" width="54" height="62"/>
+  <object id="50" name="collectables_Apple" x="4833" y="770.333" width="54" height="62"/>
+  <object id="51" name="collectables_Apple" x="5187.67" y="563.667" width="54" height="62"/>
+  <object id="52" name="collectables_Apple" x="5322.33" y="706.333" width="54" height="62"/>
+  <object id="53" name="collectables_Apple" x="6023.67" y="206.333" width="54" height="62"/>
+  <object id="54" name="collectables_Apple" x="5818.33" y="483.667" width="54" height="62"/>
+  <object id="55" name="collectables_Apple" x="6163.67" y="627.667" width="54" height="62"/>
+  <object id="56" name="collectables_Apple" x="5323.67" y="282.333" width="54" height="62"/>
+  <object id="57" name="collectables_Apple" x="7214.33" y="67.6667" width="54" height="62"/>
+  <object id="58" name="collectables_Apple" x="7989" y="-203" width="54" height="62"/>
+  <object id="59" name="collectables_Apple" x="7709" y="-491" width="54" height="62"/>
+  <object id="60" name="collectables_Apple" x="7355.67" y="-619" width="54" height="62"/>
+  <object id="61" name="collectables_Apple" x="7705" y="-135" width="54" height="62"/>
   <object id="63" name="health" x="8967.33" y="634.667" width="45.3333" height="52"/>
   <object id="64" name="health" x="8764" y="504.667" width="45.3333" height="52"/>
-  <object id="65" name="star" x="7705" y="699.667" width="54" height="62"/>
-  <object id="66" name="star" x="6866.33" y="146.333" width="54" height="62"/>
-  <object id="67" name="star" x="2249" y="142.333" width="54" height="62"/>
+  <object id="65" name="collectables_Apple" x="7705" y="699.667" width="54" height="62"/>
+  <object id="66" name="collectables_Apple" x="6866.33" y="146.333" width="54" height="62"/>
+  <object id="67" name="collectables_Apple" x="2249" y="142.333" width="54" height="62"/>
   <object id="68" name="spike-top" x="6388.83" y="-69.6667" width="26.6667" height="30.6667"/>
  </objectgroup>
 </map>
