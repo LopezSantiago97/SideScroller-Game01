@@ -14,6 +14,7 @@ export default class PlayerController {
     private stateMachine: StateMachine;
 
     private health = 100
+    private speed = 7
 
 
     constructor(scene: Phaser.Scene, sprite: Phaser.Physics.Matter.Sprite, cursors: CursorKeys, obstacles: ObstaclesController) {
@@ -121,13 +122,13 @@ export default class PlayerController {
     }
 
     private walkOnUpdate() {
-        const speed = 10;
+
         if (this.cursors.left.isDown) {
             this.sprite.flipX = true;
-            this.sprite.setVelocityX(-speed)
+            this.sprite.setVelocityX(-this.speed)
         } else if (this.cursors.right.isDown) {
             this.sprite.flipX = false;
-            this.sprite.setVelocityX(speed);
+            this.sprite.setVelocityX(this.speed);
         } else {
             this.sprite.setVelocityX(0);
             this.stateMachine.setState('idle');
@@ -148,13 +149,14 @@ export default class PlayerController {
     }
 
     private jumpOnUpdate() {
-        const speed = 10;
         if (this.cursors.left.isDown) {
             this.sprite.flipX = true;
-            this.sprite.setVelocityX(-speed)
+            this.sprite.setVelocityX(-this.speed)
         } else if (this.cursors.right.isDown) {
             this.sprite.flipX = false;
-            this.sprite.setVelocityX(speed);
+            this.sprite.setVelocityX(this.speed);
+        } else {
+            this.sprite.setVelocityX(0);
         }
     }
 

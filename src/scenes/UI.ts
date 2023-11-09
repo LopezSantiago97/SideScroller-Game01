@@ -26,7 +26,7 @@ export default class UI extends Phaser.Scene {
 
 
         // Texto con contador de estrellas
-        this.starsLabel = this.add.text(10, 35, 'Stars: 0', {
+        this.starsLabel = this.add.text(10, 35, 'Manzanas: 0', {
             fontSize: '32px'
         })
 
@@ -76,7 +76,7 @@ export default class UI extends Phaser.Scene {
 
     private handleStarCollected() {
         ++this.starsCollected
-        this.starsLabel.text = `Stars: ${this.starsCollected}`
+        this.starsLabel.text = `Manzanas: ${this.starsCollected}`
     }
 
 }

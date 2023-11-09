@@ -25,6 +25,7 @@ export default class Game extends Phaser.Scene {
 
         this.load.image('apple', 'assets/apple.png');
         this.load.image('heart', 'assets/heart.png');
+        this.load.image('spike-top', 'assets/spike-top.png');
     }
 
     create() {
@@ -92,6 +93,18 @@ export default class Game extends Phaser.Scene {
                             isStatic: true
                         })
                         this.obstacles.add('spikes', spike)
+                        break
+                    }
+                case 'spike-top':
+                    {
+                        const spikeTop = this.matter.add.sprite(x, y, 'spike-top', undefined, {
+                            isStatic: true,
+                            isSensor: true
+                        })
+                        spikeTop.setScale(0.05, 0.05)
+                        spikeTop.setData('type', 'spike-top')
+                        spikeTop.setData('damage', 10)
+
                         break
                     }
             }
