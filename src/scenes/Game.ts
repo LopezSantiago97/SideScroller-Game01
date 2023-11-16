@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 import PlayerController from "./PlayerController";
 import ObstaclesController from "./ObstaclesController";
+import TrapSpikeTop from "./TrapSpikeTop";
 
 export default class Game extends Phaser.Scene {
 
@@ -8,6 +9,8 @@ export default class Game extends Phaser.Scene {
     private penguin!: Phaser.Physics.Matter.Sprite;
     private playerController?: PlayerController;
     private obstacles!: ObstaclesController;
+
+    private trapObstacles: TrapSpikeTop[] = [];
 
     constructor() {
         super('game')
@@ -95,15 +98,30 @@ export default class Game extends Phaser.Scene {
                         this.obstacles.add('spikes', spike)
                         break
                     }
+                // case 'spike-top':
+                //     {
+                //         const spikeTop = this.matter.add.sprite(x + (width * 0.5), y + (height * 1), 'spike-top', undefined, {
+                //             isStatic: true,
+                //             isSensor: true
+                //         })
+                //         spikeTop.setData('type', 'spike-top')
+                //         spikeTop.setData('damage', 20)
+
+                //         break
+                //     }
                 case 'spike-top':
                     {
-                        const spikeTop = this.matter.add.sprite(x + (width * 0.5), y + (height * 1), 'spike-top', undefined, {
-                            isStatic: true,
-                            isSensor: true
-                        })
-                        spikeTop.setData('type', 'spike-top')
-                        spikeTop.setData('damage', 10)
 
+                        const trapSpikeTop = new TrapSpikeTop(this, x + (width * 0.5), y + (height * 1), 'spike-top')
+
+                        // const spikeTop = this.matter.add.sprite(x + (width * 0.5), y + (height * 1), 'spike-top', undefined, {
+                        //     isStatic: true,
+                        //     isSensor: true
+                        // })
+                        trapSpikeTop.setData('type', 'spike-top')
+                        trapSpikeTop.setData('damage', 20)
+
+                        this.trapObstacles.push(trapSpikeTop)
                         break
                     }
             }
